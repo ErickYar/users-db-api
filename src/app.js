@@ -8,6 +8,12 @@ const app = express()
 
 const PORT = process.env.PORT || 4298
 
+
+//? validar la conexión 
+db.authenticate()
+.then(()=>console.log('Data Authenticated'))
+.catch(err=>console.log(err))
+
 app.use(express.json())
 app.use(cors())
 
