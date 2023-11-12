@@ -11,7 +11,7 @@ const config = {
         password:'root',
         //Extra configs
         define:{
-            timestamps:true,
+            timestamps:true,  
             underscored:true},
         },
         //Esta configuracon es para produccion 
@@ -46,4 +46,4 @@ const config = {
     },
 }}
 
-module.exports
+module.exports = config

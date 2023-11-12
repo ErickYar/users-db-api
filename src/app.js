@@ -3,6 +3,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 const usersRouter = require('./users/user.router')
+const db = require ('./utils/database')
 const app = express()
 
 const PORT = process.env.PORT || 4298
