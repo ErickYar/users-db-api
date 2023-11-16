@@ -6,7 +6,7 @@ const findAllPosts = async () => {
     return posts
 }
 
-const findUserId = async (id) => {
+const findPostsId = async (id) => {
     const post = await Users.findOne({
         where:{
             id:id,
@@ -47,7 +47,7 @@ const deletePost = async(id) => {
 }
  module.exports = {
     findAllPosts,
-    findUserId,
+    findPostsId,
     createNewPost,
     updatePost,
     deletePost

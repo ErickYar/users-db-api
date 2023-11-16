@@ -32,4 +32,8 @@ const postUser = (req,res) => {
         res.status(404).json({message:'Bad request',err})
     })
 }
-module.exports={getAllUsers,getUsersId,postUser}
+module.exports = {
+    getAllUsers,
+    getUsersId,
+    postUser
+}
