@@ -6,7 +6,6 @@ const findAllUser = async () => {
 }
 
 const findUserId = async (id) => {
-
     const data = await Users.findOne({
         where:{
             id:id,

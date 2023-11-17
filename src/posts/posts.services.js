@@ -53,7 +53,7 @@ const deletePost = (req,res) => {
     const id = Number(req.params.id)
     postsControllers .deletePost(id)
     .then(data => {
-         if(!data) return res.status(404).json({message:'Invalid ID'})
+         if(!data) return res.status(404).json({message:'Invalid ID post'})
 
         res.status(204).json(data)
     })

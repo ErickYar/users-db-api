@@ -1,5 +1,4 @@
 const Posts = require('../models/posts.model')
-// const { post } = require('../users/user.router')
 
 const findAllPosts = async () => {
     const posts = await Posts.findAll()
