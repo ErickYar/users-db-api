@@ -26,7 +26,7 @@ const getPostsById = (req,res) => {
 
 const postNewPosts = (req,res) => {
     const postObj = req.body
-    postsControllers.createUsers(postObj)
+    postsControllers.createNewPost(postObj)
     .then(data => {
         res.status(201).json(data)
     })

@@ -3,6 +3,8 @@ const cors = require('cors')
 require('dotenv').config()
 
 const usersRouter = require('./users/user.router')
+const postRouter = require('./posts/post.router')
+
 const db = require ('./utils/database')
 const initModels = require('./models/initModels')
 const app = express()
@@ -15,7 +17,7 @@ db.authenticate()
 .then(()=>console.log('Data Authenticated'))
 .catch(err=>console.log(err))
 
-db.sync()
+db.sync({force:false})
 .then(()=>console.log('Database Synced!'))
 .catch(err => console.log(err))
  
@@ -32,6 +34,7 @@ res.json({message:'Server Nuevo',
 })
 
 app.use('/',usersRouter)
+app.use('/',postRouter)
 
 app.listen(PORT,()=>{
     console.log(`la practica hace el maestro ${PORT}`)
